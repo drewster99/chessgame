@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:chessgame}",
+            "name": "Debug ChessGame",
+            "program": "${workspaceFolder:chessgame}/.build/debug/ChessGame",
+            "preLaunchTask": "swift: Build Debug ChessGame"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:chessgame}",
+            "name": "Release ChessGame",
+            "program": "${workspaceFolder:chessgame}/.build/release/ChessGame",
+            "preLaunchTask": "swift: Build Release ChessGame"
+        }
+    ]
+}
