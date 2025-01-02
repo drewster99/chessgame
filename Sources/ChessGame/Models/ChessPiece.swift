@@ -1,8 +1,13 @@
 import Foundation
 
 struct ChessPiece: Equatable {
-    enum PieceType {
-        case king, queen, rook, bishop, knight, pawn
+    enum PieceType: String {
+        case king = "king"
+        case queen = "queen"
+        case rook = "rook"
+        case bishop = "bishop"
+        case knight = "knight"
+        case pawn = "pawn"
     }
     
     let type: PieceType

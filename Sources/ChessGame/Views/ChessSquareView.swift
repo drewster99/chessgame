@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUI
 
 struct ChessSquareView: View {
@@ -13,10 +14,13 @@ struct ChessSquareView: View {
                 .frame(width: 60, height: 60)
             
             if let piece = piece {
-                Image(pieceImage(for: piece))
+                let imageName = pieceImage(for: piece)
+                
+                Image(imageName, bundle: .module)
                     .resizable()
-                    .scaledToFit()
+                    .foregroundColor(piece.isWhite ? .white : .black) // Set the color
                     .frame(width: 50, height: 50)
+                    .shadow(radius: 1)
             }
         }
         .overlay(
@@ -57,13 +61,8 @@ struct ChessSquareView: View {
     
     private func pieceImage(for piece: ChessPiece) -> String {
         let color = piece.isWhite ? "white" : "black"
-        switch piece.type {
-        case .king: return "\(color)_king"
-        case .queen: return "\(color)_queen"
-        case .rook: return "\(color)_rook"
-        case .bishop: return "\(color)_bishop"
-        case .knight: return "\(color)_knight"
-        case .pawn: return "\(color)_pawn"
-        }
+        let type = piece.type.rawValue
+        let imageName = "\(color)_\(type)"
+        return imageName
     }
 }

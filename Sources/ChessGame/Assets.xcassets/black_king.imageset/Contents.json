@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "black_rook.svg",
+      "filename" : "black_king.svg",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,7 @@
     "version" : 1
   },
   "properties" : {
+    "template-rendering-intent": "template",
     "preserves-vector-representation" : true
   }
 } 

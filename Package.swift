@@ -5,7 +5,7 @@ let package = Package(
     name: "ChessGame",
     platforms: [
         .macOS(.v11),
-        .iOS(.v13)
+        .iOS(.v14)
     ],
     products: [
         .executable(
@@ -14,6 +14,10 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "ChessGame"),
+            name: "ChessGame",
+            resources: [
+                .process("Assets.xcassets")
+            ]
+        ),
     ]
 ) 

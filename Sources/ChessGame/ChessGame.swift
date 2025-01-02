@@ -12,6 +12,11 @@ class ChessGame: ObservableObject {
     private var gameOverSound: AVAudioPlayer?
     
     init() {
+
+print("Bundle.main = \(Bundle.main)")
+print("Bundle.module = \(Bundle.module)")
+print("Bundle.module resource path: \(Bundle.module.resourcePath ?? "Not found")")
+
         setupBoard()
         setupSounds()
     }
