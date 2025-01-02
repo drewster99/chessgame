@@ -23,5 +23,3 @@ Anyway, I'm placing this initial version here as a point-in-time example of what
 1. Well, White goes first of course, but the computer won't make the first move, so right now you need to move the white piece first, and then move a black piece.  After that, white will take its turn automatically.
 
 2. To move, you need to click on the piece you want to move, then click on the new square.  However, there's no way to reset the selected piece, so once you've clicked one, you HAVE to move that piece.
-
-3. 
